@@ -1,127 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="app">
 <head>
+  <script src="lib/angular.min.js"></script>
+  <script src="lib/angular-ui-router.min.js"></script>
+  <script src="js/angular-app.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/sidebar.css">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ASF Siena Data and Scripts</title>
-  <!-- Bootstrap Core CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-  <!-- Custom CSS -->
-  <style>
-    @media (min-width: 979px) {
-      body {
-        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
-      }
-    }
-    .margin {
-      margin-left: 10px;
-      margin-right: 10px;
-    }
-  </style>
+  <meta name="description" content="David Kavaler's personal webpage">
+  <meta name="keywords" content="kavaler, david kavaler, computer science,
+  computer engineering, software engineering, networks, network theory, software networks,
+  android, open source, economics">
+  <title>David Kavaler, Computer Science</title>
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
 </head>
 <body>
-  <!-- Page Content -->
-  <div class="container">
-    <div class="row">
-      <div class="jumbotron">
-        <h1>Developer See, Developer Do?</h1>
-        <p>This page contains data and scripts used in the paper: "Developer See, Developer Do? Homophily and Influence in OSS Projects" by
-         <strong>David Kavaler</strong> and <strong>Vladimir Filkov</strong></p>
-      </div>
-    </div>
-    <div class="row">
+  <div id="wrapper">
 
-      <div class="col-md-2"></div>
-
-      <div class="panel panel-primary col-md-4 text-center well well-lg margin">
-        <h2 class="panel-heading">Data</h2>
-
-        <div class="btn-group">
-          <div class="btn-group">
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-              Ant
-              <span class="caret"></span>
-              <span class="sr-only">Toggle Dropdown</span>
-            </button>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="data/ant_all_data.csv">Metric data</a></li>
-              <li><a href="data/ant_commits.csv">Commits</a></li>
-              <li><a href="data/ant_emails.csv">Emails</a></li>
-            </ul>
-          </div>
-
-          <div class="btn-group">
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-              Axis2/Java
-              <span class="caret"></span>
-              <span class="sr-only">Toggle Dropdown</span>
-            </button>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="data/axis2_java_all_data.csv">Metric data</a></li>
-              <li><a href="data/axis2_java_commits.csv">Commits</a></li>
-              <li><a href="data/axis2_java_emails.csv">Emails</a></li>
-            </ul>
-          </div>
-
-          <div class="btn-group">
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-              Derby
-              <span class="caret"></span>
-              <span class="sr-only">Toggle Dropdown</span>
-            </button>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="data/derby_all_data.csv">Metric data</a></li>
-              <li><a href="data/derby_commits.csv">Commits</a></li>
-              <li><a href="data/derby_emails.csv">Emails</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <p class="panel-body text-left">
-          ASF project data was initially processed and gathered by <a href="http://www.gharehyazie.com/">Mohammad Gharehyazie</a>.
-          Additional processing was done by us to gather metrics.
-          The files above contain the post-processed data used in our work. All files are in csv format.
-        </p>
-      </div>
-
-
-      <div class="panel panel-primary col-md-4 text-center well well-lg margin">
-        <h2 class="panel-heading">Scripts</h2>
-
-        <div class="btn-group">
-          <div class="btn-group">
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-              All projects
-              <span class="caret"></span>
-              <span class="sr-only">Toggle Dropdown</span>
-            </button>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="scripts/build_network_with_decay_function.R">Network generation with decay</a></li>
-              <li><a href="scripts/siena_model_sim.R">Siena model simulation</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <p class="panel-body text-left">
-          The scripts above were used to generate networks using a decay function and to run the <a href="http://www.stats.ox.ac.uk/~snijders/siena/">SIENA</a> model simulation. All scripts are written in R.
-          Scripts require editing before use to specify file paths and model names (see all strings containing "PLACEHOLDER"). Control profile computations
-          were performed using <a href="http://zen.networkdynamics.org/">Python Zen</a> (not included; the scripts are 4 lines long and can be easily reproduced
-          using the <a href="http://www.networkdynamics.org/static/zen/html/api/api.html">Zen documentation</a>).
-        </p>
-      </div>
-
-      <div class="col-md-2"></div>
-
+    <div id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+          <a ui-sref="about">
+            David Kavaler
+          </a>
+        </li>
+        <li>
+          <a ui-sref-active="active" ui-sref="about">
+            About Me <span class="glyphicon glyphicon-user"></span>
+          </a>
+        </li>
+        <li>
+          <a ui-sref-active="active" ui-sref="publications">
+            Publications <span class="glyphicon glyphicon-pencil"></span>
+          </a>
+        </li>
+        <li>
+          <a href="docs/resume.pdf">
+            Download Resume <span class="glyphicon glyphicon-download-alt"></span>
+          </a>
+        </li>
+      </ul>
     </div>
 
-    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-  </body>
-  </html>
+    <div id="page-content-wrapper">
+      <div ui-view></div>
+    </div>
+
+  </div>
+</body>
+</html>
