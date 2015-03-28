@@ -1,7 +1,98 @@
-<div class="container-fluid"
-  <div class="row">
-    <div class="col-lg-12">
-      <h1>Publications!</h1>
+<div class="row container-fluid">
+  <div class="col-md-2"></div><!-- empty -->
+  <div class="col-md-8">
+    <div class="page-header">
+      <h1>Publications</h1>
     </div>
   </div>
+  <div class="col-md-2"></div><!-- empty -->
+</div>
+</br>
+<div class="row container-fluid">
+  <div class="col-md-2"></div>
+
+  <div class="col-md-8"><!-- wrap the panels in a well -->
+    <accordion close-others="false">
+      <accordion-group is-open="$parent.acc1open">
+        <accordion-heading ng-click="acc1open = true">
+          Developer See, Developer Do? Homophily and Influence in OSS Projects
+          <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': acc1open, 'glyphicon-chevron-right': !acc1open}"></i>
+        </accordion-heading>
+        <strong>Authors</strong>
+        <p><u>David Kavaler</u> and Vladimir Filkov</p>
+        <strong>Abstract</strong>
+        <p>
+          <p>
+            Learning to work with others is part and parcel of software development,
+            especially in Open Source Software projects. The social and technical activities
+            of all developers in those projects change and evolve together, organized in
+            a network of socio-technical links. And as they do, traces are typically visible
+            to all, in project repos and through communication between them. Just like open
+            source code makes cloning a viable learning and coding mechanism, here we ask if
+            the openly observable socio-technical behavior of developers in these projects affects
+            others, and is perhaps imitated by them? We are interested in three behaviors in particular,
+            which might be visible to all in a socio-technical network of developers: productivity,
+            social linking, and file ownership.
+          </p>
+
+          <p>
+            Since OSS projects change dramatically in both social and technical activity over time, static
+            approaches, that either ignore time or simplify it to few slices, are frequently inadequate to
+            study these networks. On the other hand, ad-hoc dynamic approaches are often only loosely
+            supported by theory and can yield misleading findings.
+
+            Borrowing from social network analysis, here we adapt for our purposes the stochastic
+            actor-oriented models for studying the evolution of network properties. This modeling
+            technique provides methods to study the interplay between behavior influence and network
+            architecture as they change over time, in a statistically sound way. When we apply these
+            modeling formalism to data from three Apache Software Foundation projects, we find evidence
+            of preferential social linking in all projects. On the other hand, we find no evidence for
+            the spread of either ownership or productivity behaviors through the networks. This work
+            illustrates the potential of dynamical network models for studying influences affecting
+            the software process.
+          </p>
+
+          <p>
+            Data and scripts used in this work can be found at
+            <a href="http://web.cs.ucdavis.edu/~filkov/software/ASF-Siena/">http://web.cs.ucdavis.edu/~filkov/software/ASF-Siena/</a>.
+          </p>
+        </p>
+        <strong>Publication Status</strong>
+        <p>Under review</p>
+      </accordion-group>
+
+      <accordion-group is-open="$parent.acc2open">
+        <accordion-heading ng-click="acc2open = true">
+          Using and Asking: APIs Used in the Android Market and Asked About in Stack Overflow
+          <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': acc2open, 'glyphicon-chevron-right': !acc2open}"></i>
+          <i class="glyphicon glyphicon-star-empty"></i>
+        </accordion-heading>
+        <strong>Authors</strong>
+        <p><u>David Kavaler</u>, Daryl Posnett, Clint Gibler, Hao Chen, Prem Devanbu, and Vladimir Filkov</p>
+        <strong>Abstract</strong>
+        <p>
+          Programming is knowledge intensive. While it is well understood that
+          programmers spend lots of time looking for information, with few exceptions,
+          there is a significant lack of data on what information they seek, and why. Modern
+          platforms, like Android, comprise complex APIs that often perplex programmers.
+          We ask: which elements are confusing, and why? Increasingly, when programmers need answers,
+          they turn to StackOverflow. This provides a novel opportunity. There are a vast number
+          of applications for Android devices, which can be
+          readily analyzed, and many traces of interactions on StackOverflow. These provide a complementary perspective on
+          using and asking, and allow the two phenomena to be studied together. How does the market demand for the USE of an
+          API drive the market for knowledge about it? Here, we analyze data from Android
+          applications and StackOverflow together, to find out what it is that programmers
+          want to know and why.
+        </p>
+        <strong>Publication Status</strong>
+        <p>
+          Presented at 5th International Conference on Social Informatics (SocInfo). Social Informatics.
+          Springer International Publishing, 2013. 405418.
+        </p>
+        <strong>Best Paper Nominee</strong>
+      </accordion-group>
+    </accordion>
+  </div>
+
+  <div class="col-md-2"></div>
 </div>
