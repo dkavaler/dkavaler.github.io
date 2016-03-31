@@ -15,7 +15,7 @@
     <accordion close-others="false">
       <accordion-group is-open="$parent.acc1open">
         <accordion-heading ng-click="acc1open = true">
-          Developer See, Developer Do? Homophily and Influence in OSS Projects
+          Stochastic Actor-Oriented Modeling for Studying Homophily and Social Influence in OSS Projects
           <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': acc1open, 'glyphicon-chevron-right': !acc1open}"></i>
         </accordion-heading>
         <strong>Authors</strong>
@@ -23,33 +23,30 @@
         <strong>Abstract</strong>
         <p>
           <p>
-            Learning to work with others is part and parcel of software development,
-            especially in Open Source Software projects. The social and technical activities
-            of all developers in those projects change and evolve together, organized in
-            a network of socio-technical links. And as they do, traces are typically visible
-            to all, in project repos and through communication between them. Just like open
-            source code makes cloning a viable learning and coding mechanism, here we ask if
-            the openly observable socio-technical behavior of developers in these projects affects
-            others, and is perhaps imitated by them? We are interested in three behaviors in particular,
-            which might be visible to all in a socio-technical network of developers: productivity,
-            social linking, and file ownership.
+          Open Source Software projects are communities in which people "learn the ropes" from each other. 
+          The social and technical activities of developers evolve together, and as they link to each other they get
+          organized in a network of changing socio-technical connections.
+          Traces of those activities, or behaviors, are typically visible to all, 
+          in project repositories and through communication between them.
+          Thus, in principle it may be possible to study those traces to tell which of the observable socio-technical behaviors of developers in these projects are responsible for the forming of persistent links between them.
+          It may also be possible to tell the extent to which links participate in the spread of potential behavioral influences. 
           </p>
 
           <p>
-            Since OSS projects change dramatically in both social and technical activity over time, static
-            approaches, that either ignore time or simplify it to few slices, are frequently inadequate to
-            study these networks. On the other hand, ad-hoc dynamic approaches are often only loosely
-            supported by theory and can yield misleading findings.
-
-            Borrowing from social network analysis, here we adapt for our purposes the stochastic
-            actor-oriented models for studying the evolution of network properties. This modeling
-            technique provides methods to study the interplay between behavior influence and network
-            architecture as they change over time, in a statistically sound way. When we apply these
-            modeling formalism to data from three Apache Software Foundation projects, we find evidence
-            of preferential social linking in all projects. On the other hand, we find no evidence for
-            the spread of either ownership or productivity behaviors through the networks. This work
-            illustrates the potential of dynamical network models for studying influences affecting
-            the software process.
+          Since OSS projects change in both social and technical activity over time,
+          static approaches, that either ignore time or simplify it to a few slices, 
+          are frequently inadequate to study these networks.  
+          On the other hand, ad-hoc dynamic approaches are
+          often only loosely supported by theory and can yield misleading findings.
+          Here we adapt the \emph{stochastic actor-oriented models} from social network analysis. 
+          These models enable the study of the interplay between behavior, influence and network architecture, for dynamic networks, in a statistically sound way.
+          </p>
+          
+          <p>
+          We apply the stochastic actor-oriented models in case studies of two Apache Software Foundation projects, and study code ownership and developer productivity as behaviors.
+          For those, we find evidence of significant social selection effects (homophily) in both projects, but in different directions.
+          However, we find no evidence for the spread (social influence) of 
+          either code ownership or developer productivity behaviors through the networks.
           </p>
 
           <p>
@@ -58,7 +55,7 @@
           </p>
         </p>
         <strong>Publication Status</strong>
-        <p>Under review</p>
+        <p>Accepted to the Journal of Empirical Software Engineering. The final publication is available at Springer via <a href="dx.doi.org/10.1007/s10664-016-9431-y">dx.doi.org/10.1007/s10664-016-9431-y</a></p>
       </accordion-group>
 
       <accordion-group is-open="$parent.acc2open">
