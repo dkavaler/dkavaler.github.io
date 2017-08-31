@@ -13,6 +13,44 @@
 
   <div class="col-md-8"><!-- wrap the panels in a well -->
     <accordion close-others="false">
+
+      <accordion-group is-open="$parent.acc3open">
+        <accordion-heading ng-click="acc3open = true">
+          Perceived Language Complexity in GitHub Issue Discussions and Their Effect on Issue Resolution
+          <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': acc3open, 'glyphicon-chevron-right': !acc3open}"></i>
+        </accordion-heading>
+        <p></p>
+        <p><strong>Authors</strong></p>
+        <p><u>David Kavaler</u>, Sasha Sirovica, Raul Aranovich, Prem Devanbu, Vladimir Filkov</p>
+        <strong>Abstract</strong>
+        <p>
+        Modern software development is increasingly collaborative. Open Source Software (OSS) are the bellwether; they support dynamic teams, with tools for code sharing, communication, and issue tracking.
+        The success of an OSS project is reliant on team communication.
+        E.g., in issue discussions, individuals rely on rhetoric to
+        argue their position, but also maintain technical relevancy.
+        Rhetoric and technical language are on opposite ends of a language complexity spectrum: the former is stylistically natural; the latter is terse and concise. Issue discussions embody this duality, as developers use rhetoric to describe technical issues.
+        The style mix in any discussion can define group culture and affect performance, e.g., issue resolution times may be longer if discussion is imprecise.
+        </p>
+
+        <p>
+        Using GitHub, we studied issue discussions to understand whether
+        project-specific language differences exist, and to what extent users conform to a language norm.
+        We built project-specific and overall GitHub language models to study the effect of perceived language complexity on multiple responses. We find that experienced users
+        conform to project-specific language norms, popular individuals use overall GitHub language
+        rather than project-specific language, and conformance to project-specific
+        language norms reduces issue resolution times. We also provide a tool to calculate project-specific perceived language complexity.
+        </p>
+        <strong>Publication Status</strong>
+        <p>
+          To be presented at ASE 2017, October 30 to November 3.
+        </p>
+        <p>
+          <br>
+          <span class="glyphicon glyphicon-download-alt" href="docs/languagecomplexitygithub.pdf"></span>
+          <a href="docs/languagecomplexitygithub.pdf">Download preprint</a>
+        </p>
+      </accordion-group>
+
       <accordion-group is-open="$parent.acc1open">
         <accordion-heading ng-click="acc1open = true">
           Stochastic Actor-Oriented Modeling for Studying Homophily and Social Influence in OSS Projects
@@ -102,6 +140,9 @@
           <a href="docs/usingandasking.pdf">Download</a>
         </p>
       </accordion-group>
+
+      
+
     </accordion>
   </div>
 
