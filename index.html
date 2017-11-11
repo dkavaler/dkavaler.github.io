@@ -1,68 +1,449 @@
 <!DOCTYPE html>
-<html ng-app="app">
-<head>
-<script src="lib/angular.min.js"></script>
-<script src="lib/angular-ui-router.min.js"></script>
-<script src="lib/ui-bootstrap-tpls-0.12.1.min.js"></script>
-<script src="js/angular-app.js"></script>
-<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-<link rel="stylesheet" href="css/sidebar.css">
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="David Kavaler's personal webpage">
-<meta name="keywords" content="kavaler, david kavaler, computer science,
-computer engineering, software engineering, networks, network theory, software networks,
-android, open source, economics">
-<title>David Kavaler, Computer Science</title>
-<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
-</head>
-<body>
-  <div id="wrapper" ng-class="{'toggled': wrapperToggle}">
+<html lang="en">
 
-    <div id="sidebar-wrapper">
-      <ul class="sidebar-nav">
-        <li class="sidebar-brand">
-          <a ui-sref="about">
-            David Kavaler
-          </a>
-        </li>
-        <li>
-          <a ui-sref-active="active" ui-sref="about">
-            About Me <span class="glyphicon glyphicon-user"></span>
-          </a>
-        </li>
-        <li>
-          <a ui-sref-active="active" ui-sref="publications">
-            Publications <span class="glyphicon glyphicon-pencil"></span>
-          </a>
-        </li>
-        <li>
-          <a href="docs/resume_website.pdf">
-            Download Resume <span class="glyphicon glyphicon-download-alt"></span>
-          </a>
-        </li>
-      </ul>
-    </div>
+  <head>
 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-    <div id="page-content-wrapper">
-      <div class="row">
-        <div class="col-md-12">
-          <a id="menu-toggle" class="btn btn-default" ng-click="wrapperToggle = !wrapperToggle"><span class="glyphicon glyphicon-list"></span></a>
-        </div>
+    <title>David Kavaler, Computer Science</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/resume.min.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        <span class="d-block d-lg-none">Start Bootstrap</span>
+        <span class="d-none d-lg-block">
+          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpeg" alt="">
+        </span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#education">Education</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#publications">Publications</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#experience">Work Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#awards">Awards &amp; Honors</a>
+          </li>
+        </ul>
       </div>
-      <div ui-view></div>
+    </nav>
+
+    <div class="container-fluid p-0">
+
+      <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
+        <div class="my-auto">
+          <h1 class="mb-0">David
+            <span class="text-primary">Kavaler</span>
+          </h1>
+          <div class="subheading mb-5">Software Engineer · Data Analyst ·
+            <a href="mailto:name@email.com">dmkavaler@ucdavis.edu</a>
+          </div>
+          <p>
+            I am currently a Ph.D. candidate in the Computer Science department at <a href="http://ucdavis.edu">UC Davis</a> in the <a href="http://decallab.cs.ucdavis.edu"> DECAL lab </a>, headed by <a href="http://web.cs.ucdavis.edu/~devanbu/"> Premkumar Devanbu </a> and <a href="http://web.cs.ucdavis.edu/~filkov/"> Vladimir Filkov</a>.
+          </p>
+          <p class="mb-5">
+            My general research interest is in the realm of Empirical Software Engineering. In particular, I am experienced in data analysis, data mining, data gathering, statistical modeling, machine learning, metric design, and natural language processing. I have extensive experience in gathering data using R and Python to build both predictive and explanatory statistical models, and I am an adept programmer in multiple languages.
+          </p>
+          <ul class="list-inline list-social-icons mb-0">
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/david-kavaler-9782a0aa/">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://github.com/dkavaler/">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://scholar.google.com/citations?user=rzt_DeIAAAAJ&hl=en&oi=ao">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-google fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
+        <div class="my-auto">
+          <h2 class="mb-5">Education</h2>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">University of California, Davis</h3>
+              <div class="subheading mb-3">Ph.D. Computer Science</div>
+              <p>GPA: 4.0</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">August 2013 - Present (Expected June 2018)</span>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">University of California, Davis</h3>
+              <div class="subheading mb-3">B.S. Computer Science and Engineering</div>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">August 2009 - June 2013</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="publications">
+        <div class="my-auto">
+          <h2 class="mb-5">publications</h2>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Elements of Socio-Technical Trust in GitHub <a data-toggle="collapse" href="#collapseAbstract1" aria-expanded="false" aria-controls="collapseAbstract1"><i class="fa fa-list-alt"></i></a></h3>
+              <div class="subheading mb-3">The Effects of Visibility, Expertise, Productivity, and Responsiveness</div>
+              <div class="collapse" id="collapseAbstract1">
+                <div class="card card-block">
+                  <p><strong>Abstract:</strong></p>
+                  <p>
+                  <p>Open Source Software (OSS) supports dynamic teams across a wide variety of social and technical backgrounds.
+                  OSS project success relies on crowd contributions; though a small number of developers
+                  are primary contributors, for tasks such as help with issue identification and documentation, and bug fixing, minority contributors are also called on.
+                  It is, then, important to know who can help and who can be trusted with important task-related duties, and why.</p>
+
+                  <p>In this paper, we argue that @-mentions in GitHub issues and pull request discussions can be appropriately used as signals of trust.
+                  We built overall and project-specific predictive future trust models of @-mentions, in order to capture the determinants  of trust in each of two hundred projects, and to understand if and how those determinants differ between projects. 
+                  We found that visibility, expertise, and productivity are associated with an increase in trust, while responsiveness is not, when controlling for confounds. Also, we find that even though  project-specific differences exist in the trust models, 
+                  the overall model can be used for cross-project prediction, indicating its GitHub-wide viability and utility.</p>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">Submitted ICSE 2018</span>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Exploiting Time and Subject Locality for Fast, Efficient, and Understandable Alert Triage <a data-toggle="collapse" href="#collapseAbstract2" aria-expanded="false" aria-controls="collapseAbstract2"><i class="fa fa-list-alt"></i></a></h3>
+              <div class="subheading mb-3"></div>
+              <div class="collapse" id="collapseAbstract2">
+                <div class="card card-block">
+                  <p><strong>Abstract:</strong></p>
+                  <p>
+                  Pending
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">Accepted ICNC 2018</span>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Perceived Language Complexity in GitHub Issue Discussions <a data-toggle="collapse" href="#collapseAbstract3" aria-expanded="false" aria-controls="collapseAbstract3"><i class="fa fa-list-alt"></i></a></h3>
+              <div class="subheading mb-3">and Their Effect on Issue Resolution</div>
+              <div class="collapse" id="collapseAbstract3">
+                <div class="card card-block">
+                  <p><strong>Abstract:</strong></p>
+                  <p>
+                  <p>Modern software development is increasingly collaborative. Open Source Software (OSS) are the bellwether; they support dynamic teams, with tools for code sharing, communication, and issue tracking.
+                  The success of an OSS project is reliant on team communication.
+                  E.g., in issue discussions, individuals rely on rhetoric to
+                  argue their position, but also maintain technical relevancy.
+                  Rhetoric and technical language are on opposite ends of a language complexity spectrum: the former is stylistically natural; the latter is terse and concise. Issue discussions embody this duality, as developers use rhetoric to describe technical issues.
+                  The style mix in any discussion can define group culture and affect performance, e.g., issue resolution times may be longer if discussion is imprecise.
+
+                  Using GitHub, we studied issue discussions to understand whether
+                  project-specific language differences exist, and to what extent users conform to a language norm.
+                  We built project-specific and overall GitHub language models to study the effect of perceived language complexity on multiple responses. We find that experienced users
+                  conform to project-specific language norms, popular individuals use overall GitHub language
+                  rather than project-specific language, and conformance to project-specific
+                  language norms reduces issue resolution times. We also provide a tool to calculate project-specific perceived language complexity.</p>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">Accepted ASE 2017</span>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Quality, Latency, and Amount of Stack Overflow Answers to Questions About Recent Android APIs <a data-toggle="collapse" href="#collapseAbstract4" aria-expanded="false" aria-controls="collapseAbstract4"><i class="fa fa-list-alt"></i></a></h3>
+              <div class="subheading mb-3">to Questions About Recent Android APIs</div>
+              <div class="collapse" id="collapseAbstract4">
+                <div class="card card-block">
+                  <p><strong>Abstract:</strong></p>
+                  <p>
+                  <p>Open Source Software (OSS) supports dynamic teams across a wide variety of social and technical backgrounds.
+                  OSS project success relies on crowd contributions; though a small number of developers
+                  are primary contributors, for tasks such as help with issue identification and documentation, and bug fixing, minority contributors are also called on.
+                  It is, then, important to know who can help and who can be trusted with important task-related duties, and why.</p>
+
+                  <p>In this paper, we argue that @-mentions in GitHub issues and pull request discussions can be appropriately used as signals of trust.
+                  We built overall and project-specific predictive future trust models of @-mentions, in order to capture the determinants  of trust in each of two hundred projects, and to understand if and how those determinants differ between projects. 
+                  We found that visibility, expertise, and productivity are associated with an increase in trust, while responsiveness is not, when controlling for confounds. Also, we find that even though  project-specific differences exist in the trust models, 
+                  the overall model can be used for cross-project prediction, indicating its GitHub-wide viability and utility.</p>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">Pending Revisions PLOS One</span>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Stochastic Actor-Oriented Modeling for Studying Homophily and Social Influence in OSS Projects <a data-toggle="collapse" href="#collapseAbstract5" aria-expanded="false" aria-controls="collapseAbstract5"><i class="fa fa-list-alt"></i></a> <i class="fa fa-star" aria-hidden="true"></i></h3>
+              <div class="subheading mb-3"></div>
+              <div class="collapse" id="collapseAbstract5">
+                <div class="card card-block">
+                  <p><strong>Invited to present at the International Symposium on the Foundations of Software Engineering (FSE) 2016.</strong></p>
+                  <p><strong>Abstract:</strong></p>
+                  <p>
+                  <p>Open Source Software projects are communities in which people "learn the ropes" from each other. 
+                  The social and technical activities of developers evolve together, and as they link to each other they get
+                  organized in a network of changing socio-technical connections.
+                  Traces of those activities, or behaviors, are typically visible to all, 
+                  in project repositories and through communication between them.
+                  Thus, in principle it may be possible to study those traces to tell which of the observable socio-technical behaviors of developers in these projects are responsible for the forming of persistent links between them.
+                  It may also be possible to tell the extent to which links participate in the spread of potential behavioral influences.</p>
+
+                  <p>Since OSS projects change in both social and technical activity over time,
+                  static approaches, that either ignore time or simplify it to a few slices, 
+                  are frequently inadequate to study these networks.  
+                  On the other hand, ad-hoc dynamic approaches are
+                  often only loosely supported by theory and can yield misleading findings.
+                  Here we adapt the <i>stochastic actor-oriented models</i> from social network analysis. 
+                  These models enable the study of the interplay between behavior, influence and network architecture, for dynamic networks, in a statistically sound way.</p>
+
+                  <p>We apply the stochastic actor-oriented models in case studies of two Apache Software Foundation projects, and study code ownership and developer productivity as behaviors.
+                  For those, we find evidence of significant social selection effects (homophily) in both projects, but in different directions.
+                  However, we find no evidence for the spread (social influence) of 
+                  either code ownership or developer productivity behaviors through the networks.</p>
+
+                  <p>Data and scripts used in this work can be found <a href="http://web.cs.ucdavis.edu/~filkov/software/ASF-Siena/">here</a>.</p>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">Accepted to journal EMSE</span>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Using and Asking: APIs Used in the Android Market and Asked About in Stack Overflow <a data-toggle="collapse" href="#collapseAbstract6" aria-expanded="false" aria-controls="collapseAbstract6"><i class="fa fa-list-alt"></i></a> <i class="fa fa-star" aria-hidden="true"></i></h3>
+              <div class="subheading mb-3"></div>
+              <div class="collapse" id="collapseAbstract6">
+                <div class="card card-block">
+                  <p><strong>Best Paper Nominee.</strong></p>
+                  <p><strong>Abstract:</strong></p>
+                  <p>
+                  Programming is knowledge intensive. While it is well understood that programmers spend lots of
+                  time looking for information, with few exceptions, there is a significant lack of data on what
+                  information they seek, and why. Modern platforms, like Android, comprise complex APIs that
+                  often perplex programmers. We ask: which elements are confusing, and why?  Increasingly, when
+                  programmers need answers, they turn to StackOverflow. This provides a novel opportunity. There
+                  are a vast number of applications for Android devices, which can be readily analyzed, and many
+                  traces of interactions on StackOverflow. These provide a complementary perspective on
+                  <i>using</i> and <i>asking</i>, and allow the two phenomena to be studied together. How does
+                  the market demand for the USE of an API drive the market for <i>knowledge</i> about it? Here,
+                  we analyze data from Android applications and StackOverflow together, to find out what it is
+                  that programmers want to know and why.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">Accepted SocInfo 2013</span>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
+        <div class="my-auto">
+          <h2 class="mb-5">Work Experience</h2>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Research and Teaching Assistant</h3>
+              <div class="subheading mb-3">University of California, Davis</div>
+              <p>Research assistant in the <a href="http://decallab.cs.ucdavis.edu"> DECAL lab</a> at UC Davis. Teaching assistant for multiple courses, including software engineering and introduction to object-oriented programming (C++).</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">September 2013 - Present</span>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Cybersecurity Summer Research Intern</h3>
+              <div class="subheading mb-3">Sandia National Laboratories</div>
+              <p>Worked towards various solutions for cybersecurity related problems. Published a paper accepted to ICNC 2018.</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">June 2016 - September 2016</span>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Software Engineering Summer Intern</h3>
+              <div class="subheading mb-3">Sensys Networks</div>
+              <p>Wrote code for a front-end in Actionscript to interface with wireless devices using a proprietary packet structure.</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">June 2010 - September 2010</span>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
+        <div class="my-auto">
+          <h2 class="mb-5">Skills</h2>
+
+          <div class="subheading mb-2">Programming Languages &amp; Tools</div>
+          <ul class="fa-ul mb-3">
+            <li>
+              <i class="fa-li fa fa-star"></i>
+              R</li>
+            <li>
+              <i class="fa-li fa fa-star"></i>
+              Python</li>
+            <li>
+              <i class="fa-li fa fa-star-half-o"></i>
+              Java</li>
+            <li>
+              <i class="fa-li fa fa-star-half-o"></i>
+              C/C++</li>
+            <li>
+              <i class="fa-li fa fa-star-half-o"></i>
+              LaTeX</li>
+            <li>
+              <i class="fa-li fa fa-star-o"></i>
+              C#</li>
+            <li>
+              <i class="fa-li fa fa-star-o"></i>
+              Javascript</li>
+          </ul>
+
+          <div class="subheading mb-2">Tools &amp; Frameworks</div>
+          <ul class="fa-ul mb-3">
+            <li>
+              <i class="fa-li fa fa-star"></i>
+              scikit-learn</li>
+            <li>
+              <i class="fa-li fa fa-star"></i>
+              Keras</li>
+            <li>
+            <li>
+              <i class="fa-li fa fa-star"></i>
+              PostgreSQL</li>
+            <li>
+              <i class="fa-li fa fa-star-half-o"></i>
+              Android</li>
+            <li>
+              <i class="fa-li fa fa-star-half-o"></i>
+              Tensorflow</li>
+            <li>
+              <i class="fa-li fa fa-star-half-o"></i>
+              Unity</li>
+            <li>
+              <i class="fa-li fa fa-star-o"></i>
+              Node.js</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
+        <div class="my-auto">
+          <h2 class="mb-5">Awards &amp; Honors</h2>
+          <ul class="fa-ul mb-0">
+            <li>
+              <i class="fa-li fa fa-trophy text-warning"></i>
+              <strong>Invited Presentation</strong>, Journal first presentation at the International Symposium on the Foundations of Software Engineering (FSE) (2016)
+            </li>
+            <li>
+              <i class="fa-li fa fa-trophy text-warning"></i>
+              <strong>Fellowship</strong>, UC Davis Graduate Group in Computer Science (2015)
+            </li>
+            <li>
+              <i class="fa-li fa fa-trophy text-warning"></i>
+              <strong>Fellowship</strong>, UC Davis Graduate Group in Computer Science (2013)
+            </li>
+            <li>
+              <i class="fa-li fa fa-trophy text-warning"></i>
+              <strong>Best Paper Nomination</strong>, International Conference on Social Informatics (2013)
+            </li>
+          </ul>
+        </div>
+      </section>
+
     </div>
 
-  </div>
-</body>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/resume.min.js"></script>
+
+  </body>
+
 </html>
